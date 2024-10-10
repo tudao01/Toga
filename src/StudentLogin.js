@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { auth } from "./firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
-function Login() {
+function StudentLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -10,7 +10,7 @@ function Login() {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      alert("Login successful!");
+      alert("Student login successful!");
     } catch (error) {
       console.error("Error logging in:", error);
       alert(error.message);
@@ -19,7 +19,7 @@ function Login() {
 
   return (
     <div>
-      <h2>Organization Login</h2>
+      <h2>Student Login</h2>
       <form onSubmit={handleLogin}>
         <input
           type="email"
@@ -41,4 +41,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default StudentLogin;

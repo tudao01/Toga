@@ -36,7 +36,7 @@ function Register() {
 
   return (
     <div>
-      <h2>Register Organization</h2>
+      <h2>Register Student Org</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
