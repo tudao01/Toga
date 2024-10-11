@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import "./App.css"; // Import the CSS file
 import Register from "./OrgRegister";
 import Login from "./OrgLogin";
 import StudentRegister from "./studentRegister.js";
@@ -7,26 +8,24 @@ import StudentLogin from "./StudentLogin";
 
 function WelcomePage() {
   return (
-    <div style={{ textAlign: "center", marginTop: "50px", color: "gold" }}>
+    <div className="welcome-page">
       <h1>Welcome to Toga</h1>
       <h2>Simplifying Event Registration and Management</h2>
-      <div>
+      <div className="button-container">
         {/* Organization buttons */}
         <Link to="/register">
-          <button style={{ margin: "10px" }}>
-            Register your Student Organization
-          </button>
+          <button>Register your Student Organization</button>
         </Link>
         <Link to="/login">
-          <button style={{ margin: "10px" }}>Organization Login</button>
+          <button>Organization Login</button>
         </Link>
 
         {/* Student buttons */}
         <Link to="/student-register">
-          <button style={{ margin: "10px" }}>Student Registration</button>
+          <button>Student Registration</button>
         </Link>
         <Link to="/student-login">
-          <button style={{ margin: "10px" }}>Student Login</button>
+          <button>Student Login</button>
         </Link>
       </div>
     </div>
